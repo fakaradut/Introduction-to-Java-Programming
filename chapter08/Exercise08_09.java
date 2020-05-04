@@ -35,12 +35,12 @@ public class Exercise08_09 {
 			if (isValid(row, column, matrix, player)) {
 				player = player % 2 + 1;
 			}
-			if (isWon(matrix, player%2+1)) {
+			if (isWon(matrix, player % 2 + 1)) {
 				isFinish = true;
 			}
 			printGame(matrix);
 		}
-		if (player%2+1 == 1) {
+		if (player % 2 + 1 == 1) {
 			System.out.println("Player is X won");
 		} else {
 			System.out.println("Player is O won");
@@ -68,12 +68,12 @@ public class Exercise08_09 {
 	}
 
 	public static boolean isValid(int row, int column, int[][] matrix, int player) {
-		if(row<0||matrix.length<=row) {
-			System.out.println("This ("+row+","+column+") area is invalid");
+		if (row < 0 || matrix.length <= row) {
+			System.out.println("This (" + row + "," + column + ") area is invalid");
 			return false;
 		}
-		if(column<0||matrix.length<=column) {
-			System.out.println("This ("+row+","+column+") area is invalid");
+		if (column < 0 || matrix.length <= column) {
+			System.out.println("This (" + row + "," + column + ") area is invalid");
 			return false;
 		}
 		if (matrix[row][column] != -1) {
@@ -93,11 +93,9 @@ public class Exercise08_09 {
 
 	public static boolean rowCheck(int[][] matrix, int player) {
 		for (int row = 0; row < matrix.length; row++) {
-			// boolean[] isWon = new boolean[3];
 			int trueCount = 0;
 			for (int column = 0; column < matrix[row].length; column++) {
 				if (matrix[row][column] == player) {
-					// isWon[column] = true;
 					trueCount++;
 				}
 			}
@@ -111,11 +109,9 @@ public class Exercise08_09 {
 	public static boolean columnCheck(int[][] matrix, int player) {
 
 		for (int column = 0; column < matrix.length; column++) {
-			// boolean[] isWon = new boolean[3];
 			int trueCount = 0;
 			for (int row = 0; row < matrix[column].length; row++) {
 				if (matrix[row][column] == player) {
-					// isWon[row] = true;
 					trueCount++;
 				}
 			}
@@ -127,8 +123,6 @@ public class Exercise08_09 {
 	}
 
 	public static boolean diagonalCheck(int[][] matrix, int player) {
-		// boolean[] isWonMain = new boolean[3];
-		// boolean[] isWonOpposite = new boolean[3];
 		int trueCountMain = 0;
 		int trueCountOpposite = 0;
 		for (int j = 0, i = 2; j < matrix.length; j++, i--) {
