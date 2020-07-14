@@ -10,7 +10,7 @@ public class Exercise18_05 {
 	public static double m(int i) {
 		double sum = 0;
 		for (int j = 1; j <= i; j++) {
-			sum += j / (j + 2.);
+			sum += j / (2*j + 1.);
 		}
 		return sum;
 	}
