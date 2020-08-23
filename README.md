@@ -1,4 +1,4 @@
-<h1>Intro-to-Java-Programming</h1>
+<h1>Introduction to Java Programming</h1>
 <h2>These are my solutions to Exercises "Intro to Java Programming, Comprehensive Version 11th Edition by Y.Daniel Liang".</h2>
 <hr/>
 <h3>Contents those i finished:</h3>
